@@ -1,0 +1,109 @@
+/*=============== RESET ===============*/
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+    /* height: 100%; */
+  }
+  
+  /*=============== END RESET ===============*/
+
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+  /*=============== START SWIPER - MOBILE FIRST===============*/
+  
+  .swiper-hero {
+    width: 100%;
+    max-width: 1600px;
+    /* if you comment out the max-wdth will give you a full screem in the slide*/
+  }
+  
+  .swiper-hero .swiper-slide {
+    width: 250px;
+  }
+  
+  .swiper-hero img{
+    height: 255px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next{
+  --swiper-navigation-size: 20px;
+  background-color: white;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+
+  opacity: 0;
+  transition:  opacity 0.3s;
+
+}
+.swiper-hero .swiper-button-prev{
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+}
+.swiper-hero .swiper-button-next{
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next{
+  opacity: 1;
+}
+
+
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+  
+}
+
+.swiper-hero .swiper-pagination-bullet{
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.swiper-hero .swiper-pagination-bullet-active{
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+  /*=============== END SWIPER ===============*/
+
+
+
+
+/*=============== START MEDIA QUERIES ===============*/
+
+@media (min-width: 1024px) {
+  .swiper-hero img{
+    height: 344px;
+    
+  }
+}
+/*=============== END MEDIA QUERIES ===============*/
+
+/* 
+REMEMBER THAT IF YOUR LAYOUT IS
+
+DESKTOP FIRST: IN MEDIA QUERIES GO "max-width" ">"
+
+MOBILE FIRST: IN MEDIA QUERIES GO "min-width" "<"
+
+ */
